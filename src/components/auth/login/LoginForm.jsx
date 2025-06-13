@@ -7,9 +7,11 @@ import { FcGoogle } from "react-icons/fc";
 import "./LoginForm.scss";
 import { loginValidationSchema } from "@/utils/validation/authValidation";
 import ForgotPassword from "../forgotPassword/ForgotPassword";
+import { useNavigate } from "react-router-dom";
 const LoginForm = ({ setIsLogin }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [isFogotPassword, setIsForgotPassword] = useState(false);
+  const navigate = useNavigate();
 
   const initiateValues = {
     userName: "",
@@ -72,7 +74,9 @@ const LoginForm = ({ setIsLogin }) => {
                   />
                 )}
               </div>
-              <button type="submit">Đăng nhập</button>
+              <button type="submit" onClick={() => navigate("/")}>
+                Đăng nhập
+              </button>
               <p>
                 Bạn chưa có tài khoản?{" "}
                 <span onClick={() => setIsLogin(false)}>Đăng ký</span>

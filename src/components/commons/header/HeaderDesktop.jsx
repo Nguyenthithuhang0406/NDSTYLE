@@ -237,14 +237,14 @@ const HeaderDesktop = () => {
 
         <div className="header-desktop__group-icon">
           <div
-            className="header-desktop__group-icon-item"
+            className="header-desktop__group-icon-item flex items-center justify-center flex-col"
             onClick={() => navigate(`/followingProducts/1`)}
           >
             <AiOutlineHeart className="header-desktop_group-i" />
             <p className="header-desktop_group-p">Yêu thích</p>
           </div>
           <div
-            className="header-desktop__group-icon-item"
+            className="header-desktop__group-icon-item flex items-center justify-center flex-col"
             onClick={() => setIsShow(!isShow)}
           >
             <MdOutlineAccountCircle className="header-desktop_group-i" />
@@ -260,7 +260,7 @@ const HeaderDesktop = () => {
             </div>
           )}
           <div
-            className="header-desktop__group-icon-item"
+            className="header-desktop__group-icon-item flex items-center justify-center flex-col"
             onClick={() => navigate("/cart")}
           >
             <GrCart className="header-desktop_group-i" />
